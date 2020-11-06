@@ -65,7 +65,7 @@ async def on_message(message):
 
             async for msg in channel.history(limit=limit + 1000):       # The added 1000 is so in case it skips messages for being
                 if msg.author != client.user:                           # a command or a message it sent, it will still read the
-                    if not is_command(msg):                             # the total amount of originally specified by the user.
+                    if not is_command(msg):                             # the total amount originally specified by the user.
                         data = data.append({'content': msg.content,
                                             'time': msg.created_at,
                                             'author': msg.author.name}, ignore_index=True)
