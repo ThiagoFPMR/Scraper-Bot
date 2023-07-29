@@ -5,7 +5,8 @@ import pandas as pd
 
 logging.basicConfig(level=logging.INFO)
 
-client = discord.Client()
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
 guild = discord.Guild
 
 @client.event
